@@ -1,6 +1,7 @@
 import React , {Component} from 'react';
 import './temperature.css';
 import Boiling from './boiling.js';
+import Display from './display.js';
 
 class Temperature extends React.Component{
     constructor(props){
@@ -12,6 +13,9 @@ class Temperature extends React.Component{
             <div className="global-style">
                 <div className="instructor">
                     显示水是否已经开了，分别有华氏温度和摄氏温度显示
+                </div>
+                <div>
+                    <Display />
                 </div>
                 <div className="content-style">
                     <Boiling CValue='1'/>

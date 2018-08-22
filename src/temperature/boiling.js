@@ -8,7 +8,7 @@ class Boiling extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="boiling">
                 {/* 目前水的状态：{this.props.CValue}  */}
                 
                 目前水的状态：{this.props.CValue >= 100 ? <span className="boildinged">"已烧开"</span> :<span className="no-boilding">"未烧开"</span>} 

@@ -20,6 +20,13 @@
     margin: 0 auto;
 }
 
+
+
+/* boiling.js的样式 */
+.boiling{
+    padding: 20px 0;
+}
+
 .boildinged{
     color: red;
     font-weight:bold; 

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Clock from './clock/clock.js';
 import Event from './event/envent.js';
+import IsLoggedIn from './isLoggedIn/isLoggedIn.js'
 import Temperature from './temperature/temperature.js';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
         </p> */}
         <Clock />
         <Event />
+        <IsLoggedIn />
         <Temperature />
       </div>
     );

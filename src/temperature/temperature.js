@@ -32,15 +32,17 @@ class Temperature extends React.Component{
             temperature
         })
     }
-
+    // 华氏度转换为摄氏度的公式
     toCelsius(fahrenheit) {
         return (fahrenheit - 32) * 5 / 9;
     }
-      
+    
+    // 摄氏度转换为华氏度的公式
     toFahrenheit(celsius) {
         return (celsius * 9 / 5) + 32;
     }
     
+    // 转换后另一个温度的的输出显示
     tryConvert(temperature, convert) {
         const input = parseFloat(temperature);
         if (Number.isNaN(input)) {

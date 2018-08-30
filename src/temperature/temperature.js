@@ -5,26 +5,6 @@ import Display from './display.js';
 // import PropTypes from 'prop-types';
 // import Formula from './formula.js';
 
-
-function toCelsius(fahrenheit) {
-    return (fahrenheit - 32) * 5 / 9;
-  }
-  
-  function toFahrenheit(celsius) {
-    return (celsius * 9 / 5) + 32;
-  }
-
-  function tryConvert(temperature, convert) {
-    const input = parseFloat(temperature);
-    if (Number.isNaN(input)) {
-        return '';
-    }
-    const output = convert(input);
-    const rounded = Math.round(output * 1000) / 1000;
-    return rounded.toString();
-    
-  }
-
 class Temperature extends React.Component{
     constructor(props){
         super(props);
@@ -34,6 +14,9 @@ class Temperature extends React.Component{
         }
         this.handleCelsius = this.handleCelsius.bind(this);
         this.handleFahrenheit =this.handleFahrenheit.bind(this);
+        this.toCelsius = this.toCelsius.bind(this);
+        this.toFahrenheit = this.toFahrenheit.bind(this);
+        this.tryConvert = this.tryConvert.bind(this);
     }
 
     handleCelsius(temperature){
@@ -50,13 +33,32 @@ class Temperature extends React.Component{
         })
     }
 
+    toCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+      
+    toFahrenheit(celsius) {
+        return (celsius * 9 / 5) + 32;
+    }
+    
+    tryConvert(temperature, convert) {
+        const input = parseFloat(temperature);
+        if (Number.isNaN(input)) {
+            return '';
+    }
+        const output = convert(input);
+        const rounded = Math.round(output * 1000) / 1000;
+        return rounded.toString();
+        
+    }
+
     render(){
         const temperature = this.state.temperature;
         const scale = this.state.scale;
         // const temperatureNewc = <Formula value={temperature} scale='c' />
         // const temperatureNewf = <Formula value={temperature} scale='f' />
-        const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
-        const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+        const celsius = scale === 'f' ? this.tryConvert(temperature, this.toCelsius) : temperature;
+        const fahrenheit = scale === 'c' ? this.tryConvert(temperature, this.toFahrenheit) : temperature;
         return(
             <div className="global-style">
                 <div className="instructor">

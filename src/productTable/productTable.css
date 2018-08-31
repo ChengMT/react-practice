@@ -1,0 +1,79 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    SimSun, sans-serif;
+}
+
+
+/* 以下是searchBar的样式 */
+.search-table{
+    display: block;
+    font-size: 16px;
+    margin: 3px auto;
+    padding: 3px 3px;
+}
+
+.row{
+    text-align: center;
+}
+
+.radio{
+    height: 15px;
+    width: 15px; 
+    vertical-align: middle;
+}
+
+.text{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px 0;
+}
+
+/*以下是 ProductTable的样式 */
+.information{
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.name{
+    padding: 0 40px 0 0;
+}
+
+/* 以下是 FilterableProductTable的样式 */
+.global{
+    width: 300px;
+    margin: 30px auto;
+    border: solid 1px rgb(40,112,136);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 以下是 ProductCategoryRow  的样式 */
+.ProductCategoryRow{
+    color: rgb(28,98,157);
+    font-weight: bolder;
+    text-align: left;
+    margin: 6px 0 6px 30px;    
+    word-spacing: 6px;
+}
+
+/* 以下是 ProductRow 的样式 */
+.ProductRow{
+    width: 245px; 
+    margin: 0 auto;
+}
+
+.prodcutlist{
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+}
+
+.prodcutlistRed{
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    color: red;
+}
+

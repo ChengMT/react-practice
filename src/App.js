@@ -5,6 +5,7 @@ import Clock from './clock/clock.js';
 import Event from './event/envent.js';
 import IsLoggedIn from './isLoggedIn/isLoggedIn.js'
 import Temperature from './temperature/temperature.js';
+import FilterableProductTable from './productTable/filterableProductTable.js';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
         <Event />
         <IsLoggedIn />
         <Temperature />
+        <FilterableProductTable />
       </div>
     );
   }

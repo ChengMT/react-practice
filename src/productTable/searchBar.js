@@ -14,12 +14,13 @@ class SearchBar extends React.Component{
 
     handleChange(e){
         this.props.handleSearch(e.target.value);
+        
     }
 
     render(){
         return(
             <div>
-                <input className ='search-table' size='28' placeholder="Search..." value={this.props.searcheText} onChange={this.handlechange}/>
+                <input type="text" className ='search-table' size='28' placeholder="Search..." value={this.props.searcheText} onChange={this.handleChange}/>
                 <div className='row'>
                     <input className='radio' type='checkbox' onChange={this.handleClick}/><span className='text'> Only show prodcts in stock</span>
                 </div>

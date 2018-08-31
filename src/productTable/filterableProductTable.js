@@ -11,14 +11,21 @@ class FilterableProductTable extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            search:'',
+            words:'',
             isToggled:false
         }
         this.isclick = this.isclick.bind(this);
+        this.searchFunction =this.searchFunction.bind(this);
     }
 
     isclick(){
         this.setState({isToggled:!this.state.isToggled})
+    }
+
+    searchFunction(words){
+        this.setState({
+            words: words
+        })
     }
 
     render(){
@@ -32,10 +39,11 @@ class FilterableProductTable extends React.Component{
         ];
 
         const isToggled=this.state.isToggled;
+        const words = this.state.words;
           
         return(
             <div className='global'>
-                <SearchBar handelHidde={this.isclick}/>
+                <SearchBar searcheText={words} handelHidde={this.isclick} handleSearch={this.searchFunction} />
                 <ProductTable list={list} isToggled={isToggled}/>
             </div>
         )
